@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="456.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddOwnerController">
+   <left>
+      <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="316.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="51.0" prefWidth="238.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="118.0" text="Address information:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="280.0" prefWidth="217.0">
+               <children>
+                  <Label text="Street:" />
+                  <TextFlow fx:id="streetText" prefHeight="33.0" prefWidth="178.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextFlow>
+                  <Label text="Local:" />
+                  <TextFlow fx:id="localText" prefHeight="33.0" prefWidth="178.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextFlow>
+                  <Label text="City:" />
+                  <TextFlow fx:id="cityText" prefHeight="33.0" prefWidth="178.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextFlow>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+        </items>
+      </SplitPane>
+   </left>
+   <center>
+      <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="316.0" prefWidth="399.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="118.0" text="Owner information:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="151.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="165.0" prefWidth="274.0">
+               <children>
+                  <Label text="Name:" />
+                  <TextField fx:id="nameField" prefHeight="25.0" prefWidth="178.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="100.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Age:" />
+                  <TextField fx:id="ageField">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="100.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Pesel:" />
+                  <TextField fx:id="peselField">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="100.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Region prefHeight="22.0" prefWidth="274.0" />
+                  <HBox alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="274.0">
+                     <children>
+                        <Button fx:id="saveAllButton" mnemonicParsing="false" text="Save all">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
